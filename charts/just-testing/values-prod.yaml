@@ -1,0 +1,17 @@
+replicaCount: 2
+
+resources:
+  requests:
+    cpu: 60m
+    memory: 60M
+
+ingress:
+  hosts:
+    - host: just-testing-prod.azurelaboratory.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - secretName: just-testing-prod-tls
+      hosts:
+        - just-testing-prod.azurelaboratory.com

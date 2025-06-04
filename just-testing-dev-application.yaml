@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: just-testing-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/azurelaboratory/just-testing.git
+    path: charts/just-testing
+    targetRevision: main
+    helm:
+    valueFiles:
+      - values-dev.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: just-testing-dev
+  syncPolicy:
+    # automated: 
+    #   prune: true
+    #   selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

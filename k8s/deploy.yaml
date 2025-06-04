@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: just-testing
+  labels:
+    app: just-testing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: just-testing
+  template:
+    metadata:
+      labels:
+        app: just-testing
+    spec:
+      containers:
+        - name: just-testing
+          image: rodstewart/just-testing:v2
+          ports:
+            - containerPort: 5000

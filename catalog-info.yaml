@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: just-testing
+  description: just-testing is a Python app that displays pod details and status
+  annotations:
+    github.com/project-slug: azurelaboratory/just-testing
+    backstage.io/techdocs-ref: dir:.
+    argocd/app-name: just-testing-dev
+spec:
+  type: service
+  owner: development
+  lifecycle: experimental

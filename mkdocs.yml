@@ -1,0 +1,21 @@
+site_name: 'just-testing'
+site_description: 'Comprehensive documentation for the just-testing service'
+repo_url: https://github.com/azurelaboratory/just-testing
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+  - kroki
+
+markdown_extensions:
+  - markdown_inline_mermaid
+
+nav:
+  - Overview: 'index.md'
+  - System Architecture: 'system-architecture.md'
+  - Architecture: 'architecture.md'
+  - Development Guide: 'development.md'
+  - Operations Runbook: 'runbook.md'
+  - Architectural Decisions:
+    - 'ADR Index': 'adr/index.md'
+    - 'ADR-001 Container Base Image': 'adr/adr-001-container-base-image.md'
