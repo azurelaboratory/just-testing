@@ -1,10 +1,8 @@
-replicaCount: 
-
+replicaCount: null
 resources:
   requests:
     cpu: 40m
     memory: 40M
-
 ingress:
   hosts:
     - host: just-testing-dev.azurelaboratory.com
@@ -15,3 +13,5 @@ ingress:
     - secretName: just-testing-dev-tls
       hosts:
         - just-testing-dev.azurelaboratory.com
+image:
+  tag: 562f3e9
